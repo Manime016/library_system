@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+            position: relative;
+            width: 100%;
+        }
+
+        .footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="div1">
+        <img src="./source/images.png" width="90px" height="90px">
+        <h3>AMC ENGINEERING COLLEGE</h3>
+        <img src="./source/vtu.jpeg" width="90px" height="90px">
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./timings.html">Library Timings</a></li>
+        <li>
+            <a href="#">Login</a>
+            <ul>
+                <li><a href="login.html?type=admin">Admin</a></li>
+                <li><a href="login.html?type=faculty">Faculty</a></li>
+                <li><a href="login.html?type=student">Student</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Content Box Containing Text and Gallery -->
+    <div class="content-box">
+        <!-- About Section -->
+        <div class="text-content">
+            <h2>About AMC Engineering College</h2>
+            <p>
+                AMC Engineering College, established in 1999, is a premier institution located in Bangalore, Karnataka.
+                Affiliated with Visvesvaraya Technological University (VTU) and approved by AICTE, the college is 
+                renowned for its commitment to academic excellence and innovation.
+            </p>
+            <p>
+                Spread across a lush green campus, AMC offers undergraduate, postgraduate, and doctoral programs in 
+                engineering, management, and other disciplines. Equipped with state-of-the-art infrastructure, modern 
+                laboratories, and a resource-rich library, AMC Engineering College fosters a holistic learning environment.
+            </p>
+            <p>
+                The institution emphasizes research, industry collaborations, and extracurricular activities, preparing 
+                students for global opportunities while instilling values of integrity and professionalism.
+            </p>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery">
+            <div class="slides">
+                <img src="./source/clg1.jpg" alt="Photo 1">
+                <img src="./source/clg2.png" alt="Photo 2">
+                <img src="./source/clg3.png" alt="Photo 3">
+                <img src="./source/clg4.png" alt="Photo 4">
+                <img src="./source/clg5.jpg" alt="Photo 5">
+            </div>
+            <div class="gallery-buttons">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+    
+        let index = 0;
+        const totalImages = images.length;
+    
+        function showSlide(newIndex) {
+            if (newIndex < 0) {
+                index = totalImages - 1;
+            } else if (newIndex >= totalImages) {
+                index = 0;
+            } else {
+                index = newIndex;
+            }
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+    
+        prev.addEventListener('click', () => showSlide(index - 1));
+        next.addEventListener('click', () => showSlide(index + 1));
+    
+        let autoSlide = setInterval(() => showSlide(index + 1), 5000);
+    
+        document.querySelector('.gallery').addEventListener('mouseenter', () => {
+            clearInterval(autoSlide);
+        });
+    
+        document.querySelector('.gallery').addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => showSlide(index + 1), 5000);
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2025 AMC Engineering College. All Rights Reserved.</p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="contact.html">Contact</a> | 
+            <a href="https://www.amcgroup.edu.in" target="_blank">Official Website</a>
+        </p>
+    </div>
+
+</body>
+</html>

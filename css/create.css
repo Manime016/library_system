@@ -1,0 +1,112 @@
+/* create.css */
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfefe; /* Light green background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for centering */
+}
+
+/* Form container styling */
+.div {
+    background-color: #f2f6f2; /* Light gray background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 40px; /* Good spacing */
+    max-width: 500px; /* Comfortable width */
+    width: 90%; /* Responsive width */
+    text-align: center;
+}
+
+/* Header styles */
+h3 {
+    font-size: 24px;
+    color: #333333; /* Dark text */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #555555; /* Slightly lighter text */
+    margin-bottom: 10px;
+    text-align: left; /* Align to the left */
+}
+
+/* Paragraph styling */
+p {
+    font-size: 14px;
+    color: #777777; /* Even lighter text */
+    margin-bottom: 15px;
+}
+
+#error-message {
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+    display: none; /* Default hidden */
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Focus effect for input fields */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #00ff22; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(0, 255, 42, 0.5); /* Green glow */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styling */
+button {
+    background-color: #05cc16; /* Green background */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px; /* Space between buttons */
+    font-size: 16px;
+    border-radius: 8px; /* Rounded edges */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+    background-color: #1f693c; /* Darker green on hover */
+}
+
+button[type="reset"] {
+    background-color: #dc3d35; /* Red background for reset */
+}
+
+button[type="reset"]:hover {
+    background-color: #b0432a; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .div {
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+}

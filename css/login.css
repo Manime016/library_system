@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f6f4; 
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.div {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 30px;
+  max-width: 400px;
+  width: 90%; 
+  text-align: center;
+}
+
+#h {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+#h2 {
+  font-size: 18px;
+  color: #555555;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%; 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box; 
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #00ff22;
+  box-shadow: 0 0 5px rgba(0, 255, 42, 0.5); 
+  outline: none; 
+}
+
+input[type="hidden"] {
+  display: none;
+}
+
+button {
+  background-color: #05cc16; 
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  font-size: 16px;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+
+button:hover {
+  background-color: #1f693c; 
+}
+
+button:active {
+  background-color: #1f693c; 
+}
+
+button[type="reset"] {
+  background-color: #dc3545; 
+}
+
+button[type="reset"]:hover {
+  background-color: #b02a37;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.alert {
+  color: #ff0000; 
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.f1[style*="display: none"] {
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}

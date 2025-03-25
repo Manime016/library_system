@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+    <div class="div">
+        <h1 id="h">Login</h1>
+        <p class="alert" id="error-message" style="display: none;">Invalid login type!</p>
+        <form id="f1" class="f1" action="process_login.php" method="post">
+            <label for="USER">Username</label>
+            <input type="text" id="USER" name="USER" required />
+
+            <label for="PASSWORD">Password</label>
+            <input type="password" id="PASSWORD" name="PASSWORD" required />
+
+            <input type="hidden" name="type" id="type" />
+            
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+    <script>
+        // Get login type from URL
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get("type");
+
+        if (type && ['admin', 'faculty', 'student'].includes(type)) {
+            document.getElementById("type").value = type;
+        } else {
+            document.getElementById("error-message").style.display = "block";
+            document.getElementById("f1").style.display = "none";
+        }
+    </script>
+</body>
+</html>
