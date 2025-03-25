@@ -2,8 +2,8 @@
 session_start();
 
 $servername = "localhost";
-$username = "mani";
-$password = "Mani789@axl";
+$username = "";
+$password = "";
 $dbname = "library";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
