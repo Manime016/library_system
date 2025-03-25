@@ -68,8 +68,8 @@ if (isset($_GET['book_id'])) {
 <?php
 // db.php - Database connection file
 $servername = "localhost";
-$username = "mani";
-$password = "Mani789@axl";
+$username = "";
+$password = "";
 $dbname = "library";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
